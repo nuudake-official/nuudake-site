@@ -4,46 +4,43 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NUUDAKE</title>
+  <title>NUUDAKE | 服に革命を。</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
+  <header class="navbar">
     <div class="logo">NUUDAKE</div>
-    <button class="hamburger" id="hamburger">&#9776;</button>
+    <div class="hamburger" id="hamburger">&#9776;</div>
+    <nav class="nav-menu" id="nav-menu">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">SCENE BOOK</a></li>
+        <li><a href="#">USERS' VOICE</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Order</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <nav class="menu" id="menu">
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">SCENE BOOK</a></li>
-      <li><a href="#">USERS' VOICE</a></li>
-      <li><a href="#">Contact</a></li>
-      <li><a href="#">Order</a></li>
-    </ul>
-  </nav>
-
-  <main class="slider">
-    <div class="slides">
-      <section class="slide">
-        <div class="content">
+  <main>
+    <div class="slider">
+      <div class="slide active">
+        <div class="hero-content">
           <h1>服に革新なんて、起こらない。<br>そう思っていた。</h1>
         </div>
-      </section>
-      <section class="slide">
-        <div class="content">
-          <h1>あなたの服は、あなたの代わりに語る。</h1>
+      </div>
+      <div class="slide">
+        <div class="hero-content">
+          <h1>自己肯定感を、着る。<br>それがNUUDAKE。</h1>
         </div>
-      </section>
-      <section class="slide">
-        <div class="content">
-          <h1>“変わってから”じゃない。<br>今の私を、いちばん素敵に見せてくれる服。</h1>
+      </div>
+      <div class="slide">
+        <div class="hero-content">
+          <h1>変わってから、じゃない。<br>今の自分に似合う服を。</h1>
         </div>
-      </section>
-    </div>
-    <div class="controls">
-      <button id="prev">&#10094;</button>
-      <button id="next">&#10095;</button>
+      </div>
+      <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
+      <button class="next" onclick="plusSlides(1)">&#10095;</button>
     </div>
   </main>
 

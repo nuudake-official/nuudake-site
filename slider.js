@@ -1,22 +1,28 @@
 
-const slides = document.querySelector(".slides");
-const slideSections = document.querySelectorAll(".slide");
-let index = 0;
+let slideIndex = 0;
+showSlide(slideIndex);
 
-document.getElementById("prev").onclick = () => {
-  index = (index > 0) ? index - 1 : slideSections.length - 1;
-  updateSlide();
-};
-
-document.getElementById("next").onclick = () => {
-  index = (index + 1) % slideSections.length;
-  updateSlide();
-};
-
-function updateSlide() {
-  slides.style.transform = `translateX(-${index * 100}vw)`;
+function plusSlides(n) {
+  showSlide(slideIndex += n);
 }
 
-document.getElementById("hamburger").onclick = () => {
-  document.getElementById("menu").classList.toggle("active");
-};
+function showSlide(n) {
+  const slides = document.getElementsByClassName("slide");
+  if (n >= slides.length) slideIndex = 0;
+  if (n < 0) slideIndex = slides.length - 1;
+
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].classList.remove("active");
+  }
+  slides[slideIndex].classList.add("active");
+}
+
+// Hamburger toggle
+document.addEventListener("DOMContentLoaded", () => {
+  const hamburger = document.getElementById("hamburger");
+  const navMenu = document.getElementById("nav-menu");
+
+  hamburger.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+  });
+});

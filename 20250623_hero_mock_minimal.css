@@ -1,0 +1,33 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  font-family: 'Inter', 'Helvetica Neue', sans-serif;
+  color: #111111;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  padding: 10vh 5vw;
+}
+
+.hero-content {
+  max-width: 800px;
+}
+
+.main-copy {
+  font-size: 2.5rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .main-copy {
+    font-size: 1.8rem;
+  }
+}
